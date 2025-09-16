@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Typecheck {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+//        Scanner sc = new Scanner(System.in);
 //        String si = sc.next().trim();
 //        char s = sc.next().trim().charAt(5);
 //
@@ -42,8 +42,16 @@ public class Typecheck {
 //        }
 //        System.out.print(b);
 
-        String s = sc.next().split();
-        char ch = s.length;
+        int n = 45525;
+        int count = 0;
 
+        while (n > 0){
+            int rem = n % 10;
+            if (rem == 5){
+                count++;
+            }
+            n /= 10;
+        }
+        System.out.println(count);
     }
 }
